@@ -3,8 +3,9 @@ package com.edu.test;
 import javax.servlet.*;
 
 public class FlowFilterTwo implements Filter {
-	
+
 	String charset;
+
 	public void init(FilterConfig config) {
 		System.out.println("init() »£√‚ ......... two");
 		charset = config.getInitParameter("en");

@@ -5,7 +5,6 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-
 @WebServlet("/logProc")
 public class LogInOutServlet extends HttpServlet {
 	// 로그인 처리

@@ -22,7 +22,7 @@ public class SessionTestServlet extends HttpServlet {
 			} else {
 				msg = "기존의 세션 객체가 리턴됨";
 			}
-		} else if (param.equals("delete")) { 
+		} else if (param.equals("delete")) {
 			session = req.getSession(false);
 			if (session != null) {
 				session.invalidate();
@@ -42,7 +42,7 @@ public class SessionTestServlet extends HttpServlet {
 			} else {
 				msg = "데이타를 추출할 세션 객체 존재하지 않음";
 			}
-		} else if (param.equals("remove")) { 
+		} else if (param.equals("remove")) {
 			session = req.getSession(false);
 			if (session != null) {
 				session.removeAttribute("msg");
@@ -50,10 +50,10 @@ public class SessionTestServlet extends HttpServlet {
 			} else {
 				msg = "데이타를 삭제할 세션 객체 존재하지 않음";
 			}
-		} else if (param.equals("replace")) { 
+		} else if (param.equals("replace")) {
 			session = req.getSession();
 			session.setAttribute("msg", "새로운 메시지입니다");
-			msg="세션 객체에 데이타 등록 완료";
+			msg = "세션 객체에 데이타 등록 완료";
 		}
 
 		out.print("처리 결과 : " + msg);
